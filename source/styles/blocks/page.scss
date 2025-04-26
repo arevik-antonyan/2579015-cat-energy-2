@@ -1,0 +1,9 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  @include flex-setting(column);
+  min-height: 100%;
+}
+
