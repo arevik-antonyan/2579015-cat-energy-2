@@ -10,6 +10,7 @@
   <link rel="apple-touch-icon" href="favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=5cb297c1-5ade-45cd-bb95-7d4947a8c068&lang=ru_RU" defer></script>
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -281,7 +282,7 @@
             </li>
           </ul>
           <div class="sub-products__promo">
-            <p class="sub-products__promo-text">Закажите все и получите чехол для кота в подарок!</p>
+            <p class="sub-products__promo-text">Закажите все <br>и получите чехол для <br>кота в подарок!</p>
           </div>
         </div>
       </div>
@@ -305,11 +306,14 @@
           <p class="address__city">Санкт-Петербург</p>
         </address>
       </div>
+      <div class="map-insert" id="map7"></div>
     </section>
   </main>
   <footer class="main-footer">
     <div class="main-footer__container page-container">
-      <img class="main-footer__logo logo" src="images/logo/brand.svg" width="128" height="24" alt="Логотип">
+      <a class="main-footer__logo logo reset-link" href="#">
+        <img class="logo-image" src="images/logo/brand.svg" width="128" height="24" alt="Логотип">
+      </a>
       <ul class="main-footer__socials social-list reset-list">
         <li class="social-list__item">
           <a class="social-list__link social-list__link--vk reset-link" href="https://vk.com/htmlacademy">

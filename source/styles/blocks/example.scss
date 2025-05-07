@@ -7,8 +7,14 @@
 .example__container {
   @include padding-adaptive($tablet-width, 45px $padding-tablet 101px);
   @include padding-adaptive($desktop-width, 0 $padding-desktop 75px);
-  @include grid-adaptive($desktop-width, 1fr 1fr, 224px);
+  @include grid-adaptive($desktop-width, 1fr 560px, 10px 224px);
   padding: 25px $padding-mobile 40px;
+}
+
+.example__content {
+  @include margin-adaptive($tablet-width, 0 0 99px);
+  @include margin-adaptive($desktop-width, 0);
+  margin-bottom: 20px;
 }
 
 .example__title {
@@ -25,12 +31,8 @@
 
 .example__data-container {
   @include flex-setting(column, space-between, center, 34px, wrap);
-  @include flex-adaptive($tablet-width, row, space-between, center, 100px, nowrap);
+  @include flex-adaptive($tablet-width, row, space-between, center, 100px, wrap);
   @include flex-adaptive($desktop-width, column, center, flex-start, 55px, wrap);
-
-  @media (min-width: $desktop-width) {
-    grid-column: 1;
-  }
 }
 
 .example__data-list {
@@ -77,11 +79,4 @@
   display: inline-block;
   margin: 0;
   text-transform: uppercase;
-}
-
-.example__slider-container {
-  @media (min-width: $desktop-width) {
-    grid-column: 2;
-    grid-row: 1/4;
-  }
 }
