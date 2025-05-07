@@ -1,6 +1,6 @@
 .benefit {
   @include grid-setting(60px 1fr, 20px);
-  @include grid-adaptive($tablet-width, 250px, 30px);
+  @include grid-adaptive($tablet-width, 250px, 31px);
   position: relative;
   counter-increment: benefit 1;
 }

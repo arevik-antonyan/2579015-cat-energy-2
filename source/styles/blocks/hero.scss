@@ -1,18 +1,52 @@
 .hero {
-  @include background-adaptive($desktop-width, linear-gradient(to right, $light-color 50%, $accent-color 50%));
   text-align: center;
+  position: relative;
 
-  @media (max-width: $mobile-width) {
-    background-image: linear-gradient($accent-color 63%, $light-color 63%);
+  @media (min-width: $desktop-width) {
+    &::before {
+      @include background-image-setting((linear-gradient(to right, rgba(104, 183, 56, 0.85) 1030px, #6ca448 1030px), url("../../images/background/hero_background_desktop@1x.jpg")), cover, left top,no-repeat);
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 700px;
+      top: -120px;
+      left: 50%;
+      bottom: 0;
+      z-index: -1;
+      box-shadow: 0 -700px 0 0 #6ca448;
+
+      @media (min-resolution: 192dpi) {
+        @include background-image-setting((linear-gradient(to right, rgba(104, 183, 56, 0.85) 1030px, #6ca448 1030px), url("../../images/background/hero_background_desktop@2x.jpg")), cover, left top,no-repeat);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      top: 814px;
+      left: 50%;
+      bottom: 0;
+      z-index: -1;
+      box-shadow: 0 -100vh 0 0 #6ca448;
+    }
   }
 }
 
 .hero__container {
   @include flex-setting(column, space-between, stretch, 0, nowrap);
   @include padding-adaptive($tablet-width, 40px 230px 0 120px);
-  @include padding-adaptive($desktop-width, 0 331px 52px 190px);
+  @include padding-adaptive($desktop-width, 0 414px 52px 190px);
   padding: 27px $padding-mobile 0;
   position: relative;
+
+  @media (max-width: $mobile-width) {
+    @include background-image-setting((linear-gradient(rgba(104, 183, 56, 0.85) 60%, $light-color 60%), url("../../images/background/hero_background_mobile@1x.jpg")), (cover, contain), top left, no-repeat);
+
+    @media (min-resolution: 192dpi) {
+      @include background-image-setting((linear-gradient(rgba(104, 183, 56, 0.85) 60%, $light-color 60%), url("../../images/background/hero_background_mobile@2x.jpg")), (cover, contain), top left, no-repeat);
+    }
+  }
 
   @media (min-width: $tablet-width) {
     align-items: flex-start;

@@ -2,7 +2,20 @@
   @include padding-adaptive($tablet-width, 77px 315px 52px 53px);
   @include padding-adaptive($desktop-width, 77px 61px 52px 55px);
   padding: 30px 33px 18px 20px;
+  position: relative;
   background-color: $background-default-color;
+
+  @media (max-width: $mobile-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      left: $padding-mobile;
+      right: $padding-mobile;
+      bottom: 57px;
+      background-color: $border-special-color;
+    }
+  }
 }
 
 .program--slim {
@@ -43,5 +56,17 @@
 .program__link {
   @include font-setting($secondary-font, 16px, 400, 16px, $dark-color);
   @include font-adaptive($tablet-width, 20px, 400, 30px);
+  @include background-image-setting(url("../../icons/stack.svg#icon_arrow"), 24px 10px, center right 8px, no-repeat);
+  padding-right: 60px;
   text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    background-size: 32px 10px;
+    background-position: center right;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
