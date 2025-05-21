@@ -2,56 +2,41 @@
   text-align: center;
   position: relative;
 
+  @media (max-width: $mobile-width-only) {
+    @include background-image-setting(linear-gradient(to right, $accent-secondary-color calc(50% - 160px), $accent-secondary-color calc(50% + 160px)), 100% 63%, left top, no-repeat);
+  }
+
   @media (min-width: $desktop-width) {
     &::before {
-      @include background-image-setting((linear-gradient(to right, rgba(104, 183, 56, 0.85) 1030px, #6ca448 1030px), url("../../images/background/hero_background_desktop@1x.jpg")), cover, left top,no-repeat);
+      @include background-image-setting((linear-gradient(to right, $accent-transparent-color 1030px, $accent-secondary-color 1030px), image-set(url("../../images/background/hero_background_desktop@1x.jpg") 1x, url("../../images/background/hero_background_desktop@2x.jpg") 2x)), cover, left top,no-repeat);
       content: "";
       position: absolute;
       width: 50%;
       height: 700px;
-      top: -120px;
+      top: -125px;
       left: 50%;
       bottom: 0;
       z-index: -1;
-      box-shadow: 0 -700px 0 0 #6ca448;
-
-      @media (min-resolution: 192dpi) {
-        @include background-image-setting((linear-gradient(to right, rgba(104, 183, 56, 0.85) 1030px, #6ca448 1030px), url("../../images/background/hero_background_desktop@2x.jpg")), cover, left top,no-repeat);
-      }
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 50%;
-      top: 814px;
-      left: 50%;
-      bottom: 0;
-      z-index: -1;
-      box-shadow: 0 -100vh 0 0 #6ca448;
+      box-shadow: 0 -700px 0 0 $accent-secondary-color;
     }
   }
 }
 
 .hero__container {
   @include flex-setting(column, space-between, stretch, 0, nowrap);
-  @include padding-adaptive($tablet-width, 40px 230px 0 120px);
-  @include padding-adaptive($desktop-width, 0 414px 52px 190px);
+  @include padding-adaptive($tablet-width, 34px 230px 0 120px);
+  @include padding-adaptive($desktop-width, 35px 414px 52px 190px);
   padding: 27px $padding-mobile 0;
   position: relative;
 
-  @media (max-width: $mobile-width) {
-    @include background-image-setting((linear-gradient(rgba(104, 183, 56, 0.85) 60%, $light-color 60%), url("../../images/background/hero_background_mobile@1x.jpg")), (cover, contain), top left, no-repeat);
-
-    @media (min-resolution: 192dpi) {
-      @include background-image-setting((linear-gradient(rgba(104, 183, 56, 0.85) 60%, $light-color 60%), url("../../images/background/hero_background_mobile@2x.jpg")), (cover, contain), top left, no-repeat);
-    }
+  @media (max-width: $mobile-width-only) {
+    @include background-image-setting((linear-gradient($accent-transparent-color 63%, $light-color 63%), image-set(url("../../images/background/hero_background_mobile@1x.jpg") 1x, url("../../images/background/hero_background_mobile@2x.jpg") 2x)), (320px 100%, 320px 63%), (center, center top), no-repeat);
   }
 
   @media (min-width: $tablet-width) {
     align-items: flex-start;
     justify-content: flex-start;
-    min-height: 880px;
+    min-height: 844px;
   }
 
   @media (min-width: $desktop-width) {
@@ -61,10 +46,10 @@
 
 .hero__title {
   @include margin-adaptive($tablet-width, 0 0 40px);
-  @include margin-adaptive($desktop-width, 70px 450px 40px 0);
+  @include margin-adaptive($desktop-width, 70px 350px 40px 0);
   margin: 0 0 25px;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $mobile-width-only) {
     color: $light-color;
   }
 
@@ -77,10 +62,11 @@
   @include font-setting($secondary-font, 14px, 400, 14px, $dark-color);
   @include font-adaptive($tablet-width, 20px, 400, 20px);
   @include margin-adaptive($tablet-width, 0 0 50px);
+  margin: 0;
   margin-bottom: 29px;
   text-transform: uppercase;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $mobile-width-only) {
     color: $light-color;
   }
 }
@@ -88,18 +74,21 @@
 .hero__image {
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 240px;
+    top: 236px;
     left: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 29px;
-    left: 560px;
+    top: 25px;
+    left: 555px;
   }
 }
 
 .hero__button {
   @include font-adaptive($tablet-width, 20px, 400, 26px);
-  padding: 14px 24px;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 26px;
+  }
 }

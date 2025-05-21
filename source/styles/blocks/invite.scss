@@ -11,7 +11,7 @@
   @include grid-setting(140px 1fr 140px, 0);
   @include grid-adaptive($tablet-width, 163px 1fr 157px, 0);
   @include padding-adaptive($tablet-width, 60px 70px);
-  @include padding-adaptive($desktop-width, 60px 78px);
+  @include padding-adaptive($desktop-width, 61px 78px);
   padding: 26px $padding-mobile;
   background-color: $light-color;
 

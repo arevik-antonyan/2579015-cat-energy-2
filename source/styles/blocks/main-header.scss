@@ -2,7 +2,7 @@
   @include flex-setting(row, space-between, center, 65px, nowrap);
   @include padding-adaptive($tablet-width, 25px $padding-tablet);
   @include padding-adaptive($desktop-width, 55px $padding-desktop 0);
-  padding: 13px $padding-mobile;
+  padding: 13px $padding-mobile 14px;
 }
 
 .main-header--accent .site-list__link {

@@ -12,4 +12,14 @@
   @media (min-width: $tablet-width) {
     height: 400px;
   }
+
+  // Поддержка WebP через @supports
+  @supports (background-image: image-set(url("../../images/map/map_mobile@1x.webp") 1x)) {
+    @include background-image-setting(image-set(url("../../images/map/map_mobile@1x.webp") 1x,
+    url("../../images/map/map_mobile@2x.webp") 2x), cover, left top, no-repeat);
+    @include background-image-adaptive($tablet-width, image-set(url("../../images/map/map_tablet@1x.webp") 1x,
+    url("../../images/map/map_tablet@2x.webp") 2x), cover, left top, no-repeat);
+    @include background-image-adaptive($desktop-width, image-set(url("../../images/map/map_desktop@1x.webp") 1x,
+    url("../../images/map/map_desktop@2x.webp") 2x), cover, left top, no-repeat);
+  }
 }
