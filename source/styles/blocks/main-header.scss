@@ -5,6 +5,12 @@
   padding: 13px $padding-mobile 14px;
 }
 
+.main-header__container:has(.main-nav--nojs) {
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 200px;
+  }
+}
+
 .main-header--accent .site-list__link {
   @media (min-width: $desktop-width) {
     color: $light-color;

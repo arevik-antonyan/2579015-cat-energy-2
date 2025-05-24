@@ -2,10 +2,9 @@
   @include padding-adaptive($tablet-width, 40px $padding-tablet 74px);
   @include padding-adaptive($desktop-width, 74px $padding-desktop 71px);
   padding: 27px $padding-mobile 26px;
-  border-top: 1px solid $border-special-color;
 
-  @media (min-width: $tablet-width) {
-    border: 0;
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $border-special-color;
   }
 }
 
@@ -15,14 +14,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 84px;
   }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 86px;
-  }
 }
 
 .catalog-products__list {
-  @include grid-adaptive($tablet-width, repeat(2, 1fr), 56px 60px);
+  @include grid-adaptive($tablet-width, repeat(2, 1fr), 60px);
   @include grid-adaptive($desktop-width, repeat(4, 245px), 65px 80px);
 }
 

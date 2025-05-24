@@ -12,8 +12,8 @@
       content: "";
       position: absolute;
       width: 50%;
-      height: 700px;
-      top: -125px;
+      height: 694px;
+      top: -114px;
       left: 50%;
       bottom: 0;
       z-index: -1;
@@ -24,8 +24,8 @@
 
 .hero__container {
   @include flex-setting(column, space-between, stretch, 0, nowrap);
-  @include padding-adaptive($tablet-width, 34px 230px 0 120px);
-  @include padding-adaptive($desktop-width, 35px 414px 52px 190px);
+  @include padding-adaptive($tablet-width, 40px 230px 0 120px);
+  @include padding-adaptive($desktop-width, 110px 414px 52px 190px);
   padding: 27px $padding-mobile 0;
   position: relative;
 
@@ -36,7 +36,7 @@
   @media (min-width: $tablet-width) {
     align-items: flex-start;
     justify-content: flex-start;
-    min-height: 844px;
+    min-height: 850px;
   }
 
   @media (min-width: $desktop-width) {
@@ -46,7 +46,7 @@
 
 .hero__title {
   @include margin-adaptive($tablet-width, 0 0 40px);
-  @include margin-adaptive($desktop-width, 70px 350px 40px 0);
+  @include margin-adaptive($desktop-width, 0 350px 40px 0);
   margin: 0 0 25px;
 
   @media (max-width: $mobile-width-only) {
@@ -74,12 +74,12 @@
 .hero__image {
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 236px;
+    top: 240px;
     left: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 25px;
+    top: 29px;
     left: 555px;
   }
 }
