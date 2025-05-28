@@ -37,7 +37,7 @@
   margin: 0 0 20px;
 }
 
-.example__desc br {
+.example__desc .break {
   display: none;
 
   @media (min-width: $desktop-width) {
