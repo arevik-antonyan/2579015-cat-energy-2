@@ -6,8 +6,8 @@
 
 .sub-product__text-container {
   @include flex-setting(row, space-between, center, 20px, nowrap);
-  @include flex-adaptive($tablet-width, row, flex-end, center, 50px, nowrap);
-  @include grid-adaptive($desktop-width, 131px 42px, 112px);
+  @include flex-adaptive($tablet-width, row, flex-end, flex-end, 50px, nowrap);
+  @include flex-adaptive($desktop-width, row, space-between, center, 112px, nowrap);
 }
 
 .sub-product__text {

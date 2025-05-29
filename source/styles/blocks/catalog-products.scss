@@ -28,6 +28,5 @@
 
 .catalog-products__item.product-card--more {
   @include padding-adaptive($tablet-width, 82px 37px 40px);
-  @include padding-adaptive($desktop-width, 34px 37px 40px);
   padding: 25px 0;
 }

@@ -16,12 +16,12 @@
       content: "";
       position: absolute;
       width: 50%;
-      height: 700px;
+      height: 694px;
       top: -114px;
       left: 50%;
       bottom: 0;
       z-index: -1;
-      box-shadow: 0 -700px 0 0 $accent-secondary-color;
+      box-shadow: 0 -694px 0 0 $accent-secondary-color;
     }
   }
 }
@@ -70,6 +70,7 @@
   @include font-setting($secondary-font, 14px, 400, 14px, $dark-color);
   @include font-adaptive($tablet-width, 20px, 400, 20px);
   @include margin-adaptive($tablet-width, 0 0 50px);
+  @include margin-adaptive($desktop-width, 0 0 52px);
   margin: 0;
   margin-bottom: 29px;
   text-transform: uppercase;
@@ -88,7 +89,7 @@
 
   @media (min-width: $desktop-width) {
     top: 29px;
-    left: 555px;
+    left: 557px;
   }
 }
 
